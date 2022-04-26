@@ -12,13 +12,15 @@ print("\n")
 # user input section (buggy code)
 
 accept = input("Do you work for " + COMPANY_NAME + "?\n(yes/no): ")
+accept = accept.lower().strip()
 
-while(accept.lower() != "yes" ) and (accept.lower() != "no")  and (accept.lower() != "n") and (accept.lower() != "y"):
+while(accept != "yes" ) and (accept!= "no")  and (accept != "n") and (accept != "y"):
     accept = input("Do you work for " + COMPANY_NAME + "?\n(yes/no): ")
     print(accept)
 
 if accept[0].lower() == "y":
     name = input("What is your name?\nName: ")
+    name = name.strip()
     for emp_name in EMPLOYEES:
         if name.lower() == emp_name.lower():
             print("Thank you " + emp_name + ", you are now checked in.")
