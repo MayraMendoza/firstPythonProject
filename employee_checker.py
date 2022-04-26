@@ -20,6 +20,8 @@ while(accept != "yes" ) and (accept!= "no")  and (accept != "n") and (accept != 
 
 if accept[0].lower() == "y":
     name = input("What is your name?\nName: ")
+    if not name:
+        name = input("What is your name?\nName: ")
     name = name.strip()
     for emp_name in EMPLOYEES:
         if name.lower() == emp_name.lower():
