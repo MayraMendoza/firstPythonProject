@@ -14,7 +14,7 @@ students = ['Mayra', 'Melissa', 'Ella', 'Joe', 'Mike', 'Tim']
 print ('Welcome!')
 accept =input('Are you a student? \n(yes/no): ').lower().strip()
 
-while  (accept != "n") and (accept != "y") and (accept != "yes" ) and (accept!= "no") :
+while  (accept != 'n') and (accept != 'y') and (accept != 'yes' ) and (accept!= 'no') :
     accept = input('Are you a student? \n(yes/no): ').lower().strip()
 
 if(accept[0] == 'y'):
