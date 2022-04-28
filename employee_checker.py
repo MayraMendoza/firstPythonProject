@@ -11,23 +11,24 @@ print("\n")
 
 # user input section (buggy code)
 
-accept = input("Do you work for " + COMPANY_NAME + "?\n(yes/no): ")
-accept = accept.lower().strip()
+accept = input("Do you work for " + COMPANY_NAME + "?\n(yes/no): ").lower().strip()
+#accept = accept.lower().strip()
 
 while(accept != "yes" ) and (accept!= "no")  and (accept != "n") and (accept != "y"):
-    accept = input("Do you work for " + COMPANY_NAME + "?\n(yes/no): ")
+    accept = input("Do you work for " + COMPANY_NAME + "?\n(yes/no): ").lower().strip()
     print(accept)
 
 if accept[0].lower() == "y":
-    name = input("What is your name?\nName: ")
+    name = input("What is your name?\nName: ").lower().strip()
     if not name:
-        name = input("What is your name?\nName: ")
-    name = name.strip()
+        name = input("What is your name?\nName: ").lower().strip()
+
+    #name = name.strip()
     for emp_name in EMPLOYEES:
-        if name.lower() == emp_name.lower():
+        if name == emp_name.lower():
             print("Thank you " + emp_name + ", you are now checked in.")
             break
-    if name.lower() != emp_name.lower():
+    if name != emp_name.lower():
           print("You're not an employee")
 else:
     print("This service is not for you. Exiting program...")
