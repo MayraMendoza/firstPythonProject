@@ -104,4 +104,58 @@ def get_filename(path):
     file_name = parse_string[len(parse_string)-1]
     return file_name
 
+#---------------------------------------------May 10th practice---------------------------------------------------------
+#1
+#https://edabit.com/challenge/bkFqwEP5Gej23didA
+#Create a function that takes a string, checks if it has the same number of x's and o's and returns either true or false.
+
+def XO(txt):
+    new_text = txt.lower()
+    num_o = new_text.count( 'o')
+    num_x = new_text.count('x')
+    if (num_o == num_x):
+        return True
+
+    return False
+
+#2
+#A factor chain is a list where each previous element is a factor of the next consecutive element.
+# The following is a factor chain:
+
+def factor_chain(lst):
+    for x in lst:
+        if (lst[-1] % x != 0):
+            return False
+
+    return True
+
+
+#3
+#https://edabit.com/challenge/mZyHqasaNyFp23RcS
+# Create a function that repeats each character in a string n times.
+
+def repeat(txt, n):
+    result = ''
+    times = n
+
+    for t in txt:
+       result += n * t
+
+    return result
+
+
+#4 - spaces between each character.
+#https://edabit.com/challenge/CDgTLtA9wMaRXmAN3
+#Create a function that takes a string and returns a string with spaces in between all of the characters.
+def space_me_out(s):
+    string = ""
+    size = len(s)
+    for x in s:
+        string += x
+        if(x == x[size-1]):
+            string+= " "
+
+    return string
+
+
 
